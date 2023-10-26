@@ -31,5 +31,15 @@ public class gun {
         int option=input.nextInt();
         return option;
     }
+    public void runMenu(){
+        int option=mainMenu();
+        while (option!=0){
+            switch(option){
+                case 1->
+
+            }
+        }
+    }
+
 
 }
