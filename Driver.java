@@ -3,10 +3,20 @@ import java.util.Scanner;
 public class Driver {
     private int mainMenu(){
         System.out.print("""
-                
+               __人人人人人人人人人人人人__
+               >BUYTHINGSTOKILLOTHERS<
+               __YYYYYYYYYYYYYYYYYYY__
                 """);
         int option=input.nextInt();
         return option;
+
+
+
+
+
+
+        System.out.println("KILL ALL IN THE WORLD!!!PLEASE!!!KILL YOU!!!");
+        System.exit();
     }
     public void runMenu(){
         int option=mainMenu();
