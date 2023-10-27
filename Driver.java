@@ -32,6 +32,7 @@ public class Driver {
         long damage =input.nextLong();
         System.out.print("Enter the description");
         String description=input.next();
+        
 
         Gun temp = new Gun();
         if (isAdded){

@@ -1,4 +1,4 @@
-public class store {
+public class Store {
     private Gun[] Guns;
     private int total=0;
     public void Gun(int number){
