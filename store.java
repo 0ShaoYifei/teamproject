@@ -1,8 +1,8 @@
 public class store {
-    private gun[] Guns;
+    private Gun[] Guns;
     private int total=0;
-    public void non(){
-    Guns =new gun[total];}
+    public void Gun(int number){
+    Guns =new Gun[number];}
 
 
 }
