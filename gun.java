@@ -21,25 +21,6 @@ public class gun {
         this.name = name;
     }
 
-    public gun() {
-    }
-
-    private int mainMenu(){
-        System.out.print("""
-                
-                """);
-        int option=input.nextInt();
-        return option;
-    }
-    public void runMenu(){
-        int option=mainMenu();
-        while (option!=0){
-            switch(option){
-                case 1->
-
-            }
-        }
-    }
-
+    public gun() {}
 
 }
