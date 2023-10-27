@@ -31,10 +31,17 @@ public class Driver {
         System.out.print("Enter the damage:  ");
         long damage =input.nextLong();
         System.out.print("Enter the description");
-        String description=input.next();
-        
+        String description=input.nextLine();
+        System.out.print("Enter the ammunitionload");
+        String ammunitionload=input.nextLine();
+        System.out.print("Enter the range");
+        long range=input.nextLong();
+        System.out.print("Enter the category");
+        String category=input.nextLine();
+        System.out.print("Enter the penetratingpower");
+        long penetratingpower=input.nextLong();
 
-        Gun temp = new Gun();
+        Gun temp = new Gun(name,price,category,description,damage,penetratingpower,range,ammunitionload);
         if (isAdded){
             System.out.println("Gun Added Successfully");
         }
