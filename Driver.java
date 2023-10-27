@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Driver {
     private int mainMenu(){
         System.out.print("""
-               __人人人人人人人人人人人人__
-               >BUYTHINGSTOKILLOTHERS<
-               __YYYYYYYYYYYYYYYYYYY__
+               __人人人人人人人人人人人人人人人__
+               >BUY THINGS TO KILL OTHERS<
+               __Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y__
                 """);
         int option=input.nextInt();
         return option;
