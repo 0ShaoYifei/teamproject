@@ -11,7 +11,7 @@ public class Driver {
         int option=input.nextInt();
         return option;
     }
-    
+
     public void runMenu(){
         int option=mainMenu();
         while (option!=0){
@@ -22,20 +22,23 @@ public class Driver {
         }
     }
     private void addguns(){
-        input.nextLine();  //dummy read of String to clear the buffer - bug in Scanner class.
+        input.nextLine();
 
         System.out.print("Enter the Gun Name:  ");
         String name = input.nextLine();
         System.out.print("Enter the Price:  ");
         double price = input.nextDouble();
+        System.out.print("Enter the damage:  ");
+        long damage =input.nextLong();
+        System.out.print("Enter the description");
+        String description=input.next();
 
-        Yoke temp = new Yoke(yokeName, yokePrice);
-        boolean isAdded = shop.add(temp);
+        Gun temp = new Gun();
         if (isAdded){
-            System.out.println("Yoke Added Successfully");
+            System.out.println("Gun Added Successfully");
         }
         else{
-            System.out.println("No Yoke Added");
+            System.out.println("No Gun Added");
         }
     }
 
