@@ -1,12 +1,18 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Driver {
+    private  Store store;
     private int mainMenu(){
         System.out.print("""
                __人人人人人人人人人人人人人人人__
                >BUY THINGS TO KILL OTHERS<
                __Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y__
-               
+               1)Show Me All Your Guns!!!
+               2)Sell You A Better Gun!!!
+               3)Give Me A Gun Like That!!!
+               0)Exit
                 """);
         int option=input.nextInt();
         return option;
@@ -16,10 +22,19 @@ public class Driver {
         int option=mainMenu();
         while (option!=0){
             switch(option){
-                case 1->
+                case 1-> listguns();
+                case 2-> addguns();
+                case 3-> findgun();
+                default -> System.out.println("Invalid option entered");
 
             }
+            System.out.println("Press enter key to continue...");
+            input.nextLine();
+            input.nextLine();
+            option = mainMenu();
         }
+        System.out.println("Hurry to kill everyone!!!");
+        System.exit(0);
     }
     private void addguns(){
         input.nextLine();
@@ -41,14 +56,31 @@ public class Driver {
         System.out.print("Enter the penetratingpower");
         long penetratingpower=input.nextLong();
 
+
         Gun temp = new Gun(name,price,category,description,damage,penetratingpower,range,ammunitionload);
+        boolean isAdded=store.add(temp);
         if (isAdded){
             System.out.println("Gun Added Successfully");
         }
         else{
             System.out.println("No Gun Added");
         }
+
+
     }
+    private void listguns() {
+        System.out.println("List of Yokes are:");
+        System.out.println(store.list());
+    }
+    private void findgun(){
+        System.out.println("Enter the gun's name");
+        String findgun = input.nextLine();
+        Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
+        for (int i = 0;i<store.inputtotal();i++){
+            Matcher matcher=pattern.matcher()
+        }
+    }
+
 
 
     private Scanner input=new Scanner(System.in);
