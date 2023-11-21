@@ -1,5 +1,10 @@
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Store {
     private Gun[] guns;
+    private Gun[] gunssearch;
     private int total=0;
     public void Gun(int number){
     guns =new Gun[number];}
@@ -32,14 +37,22 @@ public class Store {
     public int inputtotal(){
         return total;
     }
+    private Scanner input=new Scanner(System.in);
     public Gun find(String name) {
+        
 
         Gun foundYoke =  null;
+        String findgun = input.nextLine();
 
         if (!isEmpty()) {
-            for (int i = 0; i < total; i++)
-                if (guns[i].getName().equals(name))
-                    foundYoke = guns[i];
+            Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
+            for (int i = 0;i<total;i++){
+                Matcher matcher=pattern.matcher(guns[i].getName());
+                if(matcher.find()){
+                    gunssearch.
+
+                }
+            }
         }
         else {
             return null;

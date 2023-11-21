@@ -77,7 +77,7 @@ public class Driver {
         String findgun = input.nextLine();
         Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
         for (int i = 0;i<store.inputtotal();i++){
-            Matcher matcher=pattern.matcher()
+            Matcher matcher=pattern.matcher([i].getName())
         }
     }
 
