@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,39 +26,37 @@ public class Store {
     }
     public String list() {
         if (isEmpty()) {
-            return "No yokes in the store";
+            return "No guns in the store";
         } else {
-            String listOfYokes = "";
+            String listOfguns = "";
             for (int i = 0; i < total; i++) {
-                listOfYokes += i + ": " + guns[i] + "\n";
+                listOfguns += i + ": " + guns[i] + "\n";
             }
-            return listOfYokes;
+            return listOfguns;
         }
     }
     public int inputtotal(){
         return total;
     }
     private Scanner input=new Scanner(System.in);
-    public Gun find(String name) {
-        
+    public ArrayList<Gun> find(String name) {
 
-        Gun foundYoke =  null;
+
+        ArrayList<Gun> arraysearch=new ArrayList<>();
         String findgun = input.nextLine();
 
         if (!isEmpty()) {
             Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
             for (int i = 0;i<total;i++){
                 Matcher matcher=pattern.matcher(guns[i].getName());
-                if(matcher.find()){
-                    gunssearch.
+                if(matcher.matches()){
+                    arraysearch.add(guns[i]);
+
 
                 }
             }
         }
-        else {
-            return null;
-        }
-        return foundYoke;
+        return arraysearch;
     }
 
 
