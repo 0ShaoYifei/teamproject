@@ -10,7 +10,7 @@ public class Driver {
     public static void main(String[] args) {
 
         Driver driver = new Driver();
-        driver.mainMenu();
+        driver.setup();
         driver.runMenu();
 
     }
@@ -89,6 +89,10 @@ public class Driver {
         String name =input.nextLine();
         System.out.println(store.find(name));
         }
+    private void setup(){
+        int number=999999;
+        store = new Store(number);
+    }
 
 
 

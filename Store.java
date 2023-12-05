@@ -5,8 +5,13 @@ import java.util.regex.Pattern;
 
 public class Store {
     private Gun[] guns;
-    private Gun[] gunssearch;
     private int total=0;
+
+    public Store(int number) {
+        guns =new Gun[number];
+    }
+
+
     public void Store(int number){
     guns =new Gun[number];}
 
