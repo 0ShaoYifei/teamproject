@@ -7,6 +7,10 @@ public class Store {
     private Gun[] guns;
     private int total=0;
 
+    public void setGuns(Gun[] guns) {
+        this.guns = guns;
+    }
+
     public Store(int number) {
         guns =new Gun[number];
     }

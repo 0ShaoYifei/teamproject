@@ -9,8 +9,10 @@ public class Driver {
 
     public static void main(String[] args) {
 
+
         Driver driver = new Driver();
         driver.setup();
+        driver.tempgunsadd();
         driver.runMenu();
 
     }
@@ -92,6 +94,10 @@ public class Driver {
     private void setup(){
         int number=999999;
         store = new Store(number);
+    }
+    public void tempgunsadd(String name, double price, String category, String description, long damage, long penetratingpower, long range, String ammunitionload){
+        Gun temp = new Gun(name,price,category,description,damage,penetratingpower,range,ammunitionload);
+        boolean isAdded=store.add(temp);
     }
 
 
