@@ -7,19 +7,20 @@ public class Store {
     private Gun[] guns;
     private Gun[] gunssearch;
     private int total=0;
-    public void Gun(int number){
+    public void Store(int number){
     guns =new Gun[number];}
+
     private boolean isFull() {
         return total == guns.length;
     }
     private boolean isEmpty() {
         return total == 0;
     }
-    public boolean add(Gun ayoke) {
+    public boolean add(Gun agun) {
         if (isFull()) {
             return false;
         } else {
-            guns[total] = ayoke;
+            guns[total] = agun;
             total++;
             return true;
         }

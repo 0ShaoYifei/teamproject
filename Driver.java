@@ -3,7 +3,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Driver {
-    private  Store store;
+    private static Store store;
+
+
+
+    public static void main(String[] args) {
+
+        Driver driver = new Driver();
+        driver.mainMenu();
+        driver.runMenu();
+
+    }
+
     private int mainMenu(){
         System.out.print("""
                __人人人人人人人人人人人人人人人__
@@ -73,24 +84,16 @@ public class Driver {
         System.out.println(store.list());
     }
     private void findgun(){
+
         System.out.println("Enter the gun's name");
-        String findgun = input.nextLine();
-        Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
-        for (int i = 0;i<store.inputtotal();i++){
-            Matcher matcher=pattern.matcher([i].getName())
+        String name =input.nextLine();
+        System.out.println(store.find(name));
         }
-    }
+
 
 
 
     private Scanner input=new Scanner(System.in);
 
-    public static void main(String[] args){
-        System.out.println("""
-                goood
-                goooood
-                god
-                
-                """);
-    }
+
 }
