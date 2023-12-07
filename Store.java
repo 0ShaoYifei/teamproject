@@ -1,10 +1,8 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Store {
     private Gun[] guns;
+
     private int total=0;
 
     public void setGuns(Gun[] guns) {
@@ -49,24 +47,21 @@ public class Store {
         return total;
     }
     private Scanner input=new Scanner(System.in);
-    public ArrayList<Gun> find(String name) {
-
-
-        ArrayList<Gun> arraysearch=new ArrayList<>();
-        String findgun = input.nextLine();
-
-        if (!isEmpty()) {
-            Pattern pattern =Pattern.compile(findgun,Pattern.CASE_INSENSITIVE);
-            for (int i = 0;i<total;i++){
-                Matcher matcher=pattern.matcher(guns[i].getName());
-                if(matcher.matches()){
-                    arraysearch.add(guns[i]);
-
-
-                }
-            }
+    public int find(String search){
+        for(int i=0;i<total;i++){
+        String TEMP=search;
+        Boolean count;
+        count=guns[i].getName().contains(TEMP);
+        if(count){
+            System.out.println(guns[i].getName());
         }
-        return arraysearch;
+        }
+
+        return 0;
+    }
+
+
+
     }
 
 
@@ -76,4 +71,4 @@ public class Store {
 
 
 
-}
+
