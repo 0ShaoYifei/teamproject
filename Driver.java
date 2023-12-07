@@ -115,7 +115,7 @@ public class Driver {
     }
     public void tempgunsadd(String name, double price, String category, String description, long damage, long penetratingpower, long range, String ammunitionload){
         Gun temp = new Gun(name,price,category,description,damage,penetratingpower,range,ammunitionload);
-        boolean isAdded=store.add(temp);
+        boolean isAdded = store.add(temp);
     }
 
 
