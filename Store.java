@@ -59,10 +59,21 @@ public class Store {
 
         return 0;
     }
+    public Gun listagun(String name) {
+
+        Gun FIND=null;
+            for (int i = 0; i < total; i++)
+                if (guns[i].getName().equals(name))
+                    FIND = guns[i];
+        System.out.println(FIND.toString());
 
 
-
+        return FIND;}
     }
+
+
+
+
 
 
 

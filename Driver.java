@@ -41,6 +41,7 @@ public class Driver {
                1)Show Me All Your Guns!!!
                2)Sell You A Better Gun!!!
                3)Give Me A Gun Like That!!!
+               4)Tell Me About That Gun!!!
                0)Exit
                 """);
         int option=input.nextInt();
@@ -54,6 +55,7 @@ public class Driver {
                 case 1-> listguns();
                 case 2-> addguns();
                 case 3-> findgun();
+                case 4-> listagun();
                 default -> System.out.println("Invalid option entered");
 
             }
@@ -109,6 +111,15 @@ public class Driver {
 
         store.find(name);
         }
+    private  void listagun(){
+        System.out.println("Enter the gun's name");
+        input.nextLine();
+        String name=input.nextLine();
+        store.listagun(name);
+    }
+
+
+
     private void setup(){
         int number=999999;
         store = new Store(number);
