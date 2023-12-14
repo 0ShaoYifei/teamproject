@@ -69,7 +69,46 @@ public class Store {
 
 
         return FIND;}
+    public int lower(int number){
+        for(int i=0;i<total;i++){
+
+            Boolean count = false;
+            if(guns[i].getPrice()<number){
+            count=true;}
+
+            if(count){
+                System.out.println(guns[i].getName());
+            }
+        }
+
+        return 0;
     }
+    public int higer(int number){
+        for(int i=0;i<total;i++){
+
+            Boolean count = false;
+            if(guns[i].getPrice()>number){
+                count=true;}
+            if(count){
+                System.out.println(guns[i].getName());
+            }
+        }
+
+        return 0;
+    }
+    public int category(String search) {
+        for (int i = 0; i < total; i++) {
+            String TEMP = search;
+            Boolean count;
+            count = guns[i].getCategory().equals(TEMP);
+            if (count) {
+                System.out.println(guns[i].getName());
+            }
+        }
+        return 0;
+    }
+    }
+
 
 
 

@@ -42,6 +42,9 @@ public class Driver {
                2)Sell You A Better Gun!!!
                3)Give Me A Gun Like That!!!
                4)Tell Me About That Gun!!!
+               5)Tell Me Guns Lower Than This Price!!!
+               6)Tell Me Guns Higher Than This Price!!!
+               7)Tell Me Guns In This Category!!!
                0)Exit
                 """);
         int option=input.nextInt();
@@ -56,6 +59,9 @@ public class Driver {
                 case 2-> addguns();
                 case 3-> findgun();
                 case 4-> listagun();
+                case 5-> lowerguns();
+                case 6-> higerguns();
+                case 7-> categorygun();
                 default -> System.out.println("Invalid option entered");
 
             }
@@ -100,7 +106,7 @@ public class Driver {
 
     }
     private void listguns() {
-        System.out.println("List of Yokes are:");
+        System.out.println("List of Guns are:");
         System.out.println(store.list());
     }
     private void findgun(){
@@ -116,6 +122,22 @@ public class Driver {
         input.nextLine();
         String name=input.nextLine();
         store.listagun(name);
+    }
+    private  void lowerguns(){
+        System.out.println("Enter the gun's highest price");
+        int name=input.nextInt();
+        store.lower(name);
+    }
+    private  void higerguns(){
+        System.out.println("Enter the gun's lowest price");
+        int name=input.nextInt();
+        store.higer(name);
+    }
+    private  void categorygun(){
+        System.out.println("Enter the gun's category");
+        input.nextLine();
+        String name=input.nextLine();
+        store.category(name);
     }
 
 
